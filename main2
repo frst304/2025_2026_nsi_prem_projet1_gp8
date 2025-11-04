@@ -20,6 +20,5 @@ def page_connexion ():
         show_quitting_menu()
   
 
-    
 
 page_connexion()
