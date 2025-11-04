@@ -12,7 +12,10 @@ message_to_ask_client_id = "Merci de bien vouloir rentrer votre numéro client :
 message_to_ask_again_client_id = "Merci de BIEN vouloir saisir votre numéro client correcte cette fois-ci : "
 message_to_ask_what_action_to_do = "Choisissez une action parmis les 6 :"
 message_to_ask_again_what_action_to_do = "Choisissez une action seulement parmis les 6 (PS. : Relire le Read.me)"
-
+message_to_ask_the_depot = "Choississez le montant à déposer "
+message_to_ask_the_depot_again = "Veuillez ressaisir le montant à déposer"
+message_to_ask_the_retrait = "Choississez le montant à retirer"
+message_to_ask_the_retrait_again ="Veuillez ressaisir le montant à retirer"
 
 
 
