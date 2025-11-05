@@ -8,14 +8,18 @@
 # retirer la somme du compte du premier client
 # ajouter la meme somme au deuxieme client
 
-def transfert_message ():
-    print "Bienvenue dans le transfert"
+def transfert():
+    print("Bienvenue dans votre page de transfert !")
+    destinataire = input("Entrez l'ID du destinataire : ")
+    montant_str = input("Entrez le montant à transférer : ")
 
 
-
-while client_is_in_transfert_page ():
-    show transfert_message
-    ask_client1_select_client2 ()
+montant = float(montant_str)
+if montant <= 0:
+    print("Le montant doit être supérieur à 0.")
+else:
+    print(f"Le transfert de {montant:.2f} vers le compte de {destinataire} a été effectué avec succès !")
+print("Retour vers le menu principal...")
     
 
     #retrait:
