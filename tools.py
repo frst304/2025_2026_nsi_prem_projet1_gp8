@@ -1,4 +1,6 @@
 
+import json
+
 # transfert :
 
 # entrer dans le transfert 
@@ -78,12 +80,8 @@ def fonctionnement_depot ():
         rep_is_no
         propose_depot
     
-
-
-
-
-
-
-
-
 fonctionnement_depot ()
+
+def save_dico_in_json_file (file_name, dico):
+    with open (file_name, "w") as f:
+        json.dump (dico, f, indent=4)
