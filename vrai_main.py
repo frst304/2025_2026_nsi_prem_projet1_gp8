@@ -28,7 +28,7 @@ def home_menu():
 def run_atm():
     
         while True:
-            choice = display_menu()
+            choice = home_menu()
             if choice == '1':
                 check_balance()
             elif choice == '2':
@@ -36,7 +36,7 @@ def run_atm():
             elif choice == '3':
                 withdraw_money()
             elif choice == '4':
-                print("Thank you for using the ATM. Goodbye!")
+                print("Merci. Aurevoir")
                 break
             else:
                 print("Erreur. Veuillez rentrer à nouveau votre choix (1-4).")
