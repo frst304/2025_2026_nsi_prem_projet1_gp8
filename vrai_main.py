@@ -32,7 +32,7 @@ def run_atm():
             if choice == '1':
                 check_balance()
             elif choice == '2':
-                deposit_money()
+                fonctionnement_depot()
             elif choice == '3':
                 withdraw_money()
             elif choice == '4':
