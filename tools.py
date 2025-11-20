@@ -1,6 +1,4 @@
 
-import json
-
 # transfert :
 
 # entrer dans le transfert 
@@ -10,18 +8,9 @@ import json
 # retirer la somme du compte du premier client
 # ajouter la meme somme au deuxieme client
 
-def transfert():
-    print("Bienvenue dans votre page de transfert !")
-    destinataire = input("Entrez l'ID du destinataire : ")
-    montant_str = input("Entrez le montant à transférer : ")
-
-
-montant = float(montant_str)
-if montant <= 0:
-    print("Le montant doit être supérieur à 0.")
-else:
-    print(f"Le transfert de {montant:.2f} vers le compte de {destinataire} a été effectué avec succès !")
-print("Retour vers le menu principal...")
+while client_is_in_transfert_page ():
+    show transfert_message
+    ask_client1_select_client2 ()
     
 
     #retrait:
@@ -30,7 +19,9 @@ print("Retour vers le menu principal...")
 #- retirer le montant au solde + noter la date dans un historique
 
 monant = input("Choisissez un montant : ")
-message_grosses_coupures : input("Voulez vous des grosses coupures?")
+message_grosses_coupures : input("Voulez vous des grosses coupures? ")
+def message_grosses_coupures() : 
+    if 
 
     #depot:
 >>>>>>> Stashed changes
@@ -40,12 +31,6 @@ message_grosses_coupures : input("Voulez vous des grosses coupures?")
 import data
 from data import *
 
-
-
-import datetime
-
-x = datetime.datetime.now()
-print(x) 
 
 
 # reponse_message_depot_verif 
@@ -65,21 +50,29 @@ def propose_depot ():
     return montant_depot
 
 def add_amount_to_account ():
-    montant_depot () 
+    pass
 
 def fonctionnement_depot ():
     propose_depot ()
+    montant_depot = float(input("Enter the amount to deposit: "))
     print(message_depot_verif) 
     while rep_is_yes :
-        add_amount_to_account
-        save_depot_in_historique
+        if montant_depot > 0:
+            add_amount_to_account
+            save_depot_in_historique
+            print (f"Le montant de {montant_depot}€ a été déposé sur le compte".)
+            return return_to_accueil
+        else :
+            print("Veuillez rentrer un montant positif.")
         return return_to_accueil
     else :
         rep_is_no
         propose_depot
+    return return_to_accueil
     
-fonctionnement_depot ()
 
-def save_dico_in_json_file (file_name, dico):
-    with open (file_name, "w") as f:
-        json.dump (dico, f, indent=4)
+
+
+
+
+
