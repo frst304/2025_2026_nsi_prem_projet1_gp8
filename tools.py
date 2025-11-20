@@ -8,16 +8,7 @@
 #- rentrer un montant 
 #si depot fait: 
 #- ajouter le montant au solde + noter la date dans un historique 
-import data
-from data import *
-
-
-
-# reponse_message_depot_verif 
-
-def rep_is_yes (rep):
-    return rep in yes_responses
-
+import dat
 def rep_is_no (rep):
     return not (rep_is_yes (rep)) 
 
