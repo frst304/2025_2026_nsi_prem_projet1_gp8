@@ -55,7 +55,7 @@ def add_amount_to_account ():
 def fonctionnement_depot ():
     propose_depot ()
     montant_depot = float(input("Enter the amount to deposit: "))
-    print(message_depot_verif) 
+    print(f"Etes-vous sur de déposer {montant_depot}€ dans votre compte ?") 
     while rep_is_yes :
         if montant_depot > 0:
             add_amount_to_account
