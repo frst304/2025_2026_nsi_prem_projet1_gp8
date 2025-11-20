@@ -73,6 +73,57 @@ def fonctionnement_depot ():
 
 
 
+code_secret = "1234"
+solde_compte = 750.0
+solde_destinataire = 150.0
+
+
+def authentification():
+    "Vérifie le code PIN de l'utilisateur."
+    essais = 3
+    while essais > 0:
+        code = input("Veuillez entrer le code PIN de votre compte bancaire: ")
+        if code == code_secret:
+            print("✔️ Authentification réussie.\n")
+            return True
+        else:
+            essais -= 1
+            print("❌ Code incorrect. Il vous reste", essais, "essai(s).\n")
+    print("⛔ Votre carte bancaire est bloquée.")
+    return False
+
+
+def transfert(solde, solde_dest):
+    "Effectue un transfert d'un compte à un autre."
+    print("Bienvenue dans votre page de Transfert")
+    print(f"Votre solde est de  {solde} €")
+
+    try:
+        montant = float(input("Le montant à transférer : "))
+    except ValueError:
+        print("❌ Le montant est invalide.")
+        return solde, solde_dest
+
+    if montant <= 0:
+        print("❌ Le montant doit être strictement positif.")
+    elif montant > solde:
+        print("❌ Vous n'avez pas assez d'argent sur votre compte bancaire pour effectuer ce transfert.")
+    else:
+        solde -= montant
+        solde_dest += montant
+        print(f"✔️ Le transfert de {montant} € a été effectué avec succès !")
+        print(f"Votre nouveau solde est de {solde} €")
+        print(f"Le solde du destinataire est de {solde_dest} €")
+
+    return solde, solde_dest
+
+
+print("DAB - Vérification du code PIN")
+if authentification():
+    solde_compte, solde_destinataire = transfert(solde_compte, solde_destinataire)
+
+
+
 
 
 
